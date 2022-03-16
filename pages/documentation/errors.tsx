@@ -11,6 +11,14 @@ function Errors() {
     <>
       <Head>
         <title>{_TITLE} || Docs MedraMart</title>
+        <meta
+          name="description"
+          content={`Al generar el archivo pueden ocurrir algunos errores inesperados. Por esta razón nos hemos propuesto a crear esta documentación para ayudarte a entender mejor los errores y encontrar una posible solución.`}
+        />
+        <meta name="keywords" content={_TITLE} />
+        <meta name="author" content="MedraMart" />
+        <meta name="robots" content="noindex" />
+        <meta name="googlebot" content="noindex" />
       </Head>
       <Box marginTop="50px">
         <Container>

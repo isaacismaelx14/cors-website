@@ -1,3 +1,3 @@
-# Obtener Dattos CORS
+# Obtener Datos CORS
 
 😎 By MedraMart

@@ -25,7 +25,6 @@ const Home: NextPage = () => {
         <meta name="author" content="MedraMart" />
         <meta name="copyright" content="MedraMart" />
         <meta name="application-name" content="MedraMart Cors Client" />
-        
       </Head>
 
       <Container>

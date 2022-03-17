@@ -50,31 +50,6 @@ function Cors() {
     if (cors) setCurrentCors(corsList.find((corsD) => corsD.name === cors));
   }, [cors, corsList]);
 
-  const createIFrame = (url: string) => {
-    const getExist = document.getElementById("CorsIframeElement");
-    if (getExist) getExist.remove();
-
-    const iframe: any = document.createElement("iframe");
-
-    iframe.id = "CorsIframeElement";
-    iframe.src = url;
-    iframe.style.display = "none";
-    iframe.sandbox = "allow-same-origin allow-scripts allow-downloads ";
-    document.body.appendChild(iframe);
-
-    iframe.onload = () => {
-      const data = iframe.contentWindow;
-      if (data) {
-        console.log(data);
-      }
-      iframe.remove();
-      setMaybeFail(true);
-      setTimeout(() => {
-        openInBrowser(url);
-      }, 2000);
-    };
-  };
-
   const DownloadData = async () => {
     const getSelected: any = document.getElementById("combo-cors-list");
     const selected = getSelected.value;
@@ -92,7 +67,7 @@ function Cors() {
     //Get the data from the consult
     const { url, date, fileName } = consult.data;
 
-    if (url) createIFrame(url);
+    if (url) openInBrowser(url);
     else
       return setError("Lo sentimos. Ha ocurrdo un error al generar el archivo");
 
@@ -258,3 +233,44 @@ function Cors() {
 }
 
 export default Cors;
+
+
+
+
+
+
+
+
+
+
+
+/* 
+
+TODO: Try to implemet this:
+
+const createIFrame = (url: string) => {
+    const getExist = document.getElementById("CorsIframeElement");
+    if (getExist) getExist.remove();
+
+    const iframe: any = document.createElement("iframe");
+
+    iframe.id = "CorsIframeElement";
+    iframe.src = url;
+    iframe.style.display = "none";
+    iframe.sandbox = "allow-same-origin allow-scripts allow-downloads ";
+    document.body.appendChild(iframe);
+
+    iframe.onload = () => {
+      const data = iframe.contentWindow;
+      if (data) {
+        console.log(data);
+      }
+      iframe.remove();
+      setMaybeFail(true);
+      setTimeout(() => {
+        openInBrowser(url);
+      }, 2000);
+    };
+  };
+
+*/

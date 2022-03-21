@@ -53,6 +53,12 @@ export const corsList: ICors[] = [
     city: "Santiago",
     urlCode: "CACHEDIR2886212069",
   },
+  {
+    name: "RDAZ",
+    url: "http://rdaz.ddns.net:8080/",
+    city: "Azua",
+    urlCode: "CACHEDIR2189444303",
+  },
 ];
 
 

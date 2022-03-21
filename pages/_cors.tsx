@@ -209,12 +209,14 @@ function Cors() {
                   </Typography>{" "}
                   <Spacer height={10} />
                   <Typography variant="body2" color="GrayText">
-                    Puede guiarse utilizando esta informacion:{" "}
                     {convertedDate && (
-                      <Typography variant="body2" color="GrayText">
-                        La fecha y hora del archivo es: <b>{convertedDate}</b>{" "}
-                        (UTC)
-                      </Typography>
+                      <>
+                        Puede guiarse utilizando esta informacion:{" "}
+                        <Typography variant="body2" color="GrayText">
+                          La fecha y hora del archivo es: <b>{convertedDate}</b>{" "}
+                          (UTC)
+                        </Typography>
+                      </>
                     )}
                     {fileName && (
                       <Typography variant="body2" color="GrayText">

@@ -18,9 +18,7 @@ import { Box } from "@mui/system";
 import Spacer from "./_spacer";
 import BrowserLink from "next/link"
 
-const openInBrowser = (url: string) => {
-  window.open(url, "_blank");
-};
+
 
 function Cors() {
   const [datetime, setDateTime] = useState<Date | null>();
@@ -32,6 +30,17 @@ function Cors() {
   const [convertedDate, setConvertedDate] = useState<string>("");
   const [fileName, setFileName] = useState<string>("");
   const title = useRef("Obtener datos CORS (Beta)");
+
+  const openInBrowser = (url: string) => {
+    // window.open(url, "_blank", "noopener noreferrer");
+    const link = document.getElementById("link_to_open") as HTMLAnchorElement;
+    if (!link)
+      return setError(
+        "Lo sentimos. Ha ocurrido un error al abrir el enlace. Por favor, intenta nuevamente."
+      );
+    link.href = url;
+    link.click();
+  };
 
   useEffect(() => {
     setDateTime(new Date());
@@ -55,7 +64,9 @@ function Cors() {
     const selected = getSelected.value;
     //Chek if all is ok
     if (!datetime)
-      return setError("Lo sentimos. Ha ocurrdo un error al generar el archivo");
+      return setError(
+        "Lo sentimos. Ha ocurrido un error al generar el archivo"
+      );
     if (!cors || !selected)
       return setError("Debe seleccionar una cors para descargar");
 
@@ -69,7 +80,9 @@ function Cors() {
 
     if (url) openInBrowser(url);
     else
-      return setError("Lo sentimos. Ha ocurrdo un error al generar el archivo");
+      return setError(
+        "Lo sentimos. Ha ocurrido un error al generar el archivo"
+      );
 
     if (fileName) setFileName(fileName);
     if (date) setConvertedDate(date);
@@ -89,6 +102,13 @@ function Cors() {
 
   return (
     <Box marginTop="40px">
+      <a
+        href="#"
+        style={{ display: "none" }}
+        rel="noopener noreferrer"
+        id="link_to_open"
+        target="_blank"
+      ></a>
       <Card>
         <Box
           p={2}

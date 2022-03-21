@@ -30,12 +30,29 @@ const Home: NextPage = () => {
       <Container>
         <Cors />
       </Container>
-      <Box width="100%" textAlign="center" marginTop={"20px"}>
-        <RouterLink href={"privacy-policy"} passHref>
+      <Box
+        textAlign="center"
+        marginTop={"20px"}
+        display="flex"
+        flexDirection="column"
+        gap="4px"
+      >
+        <RouterLink href="/documentation/errors" passHref>
+          <Link>Manejo de errores</Link>
+        </RouterLink>
+        <RouterLink href="/privacy-policy" passHref>
           <Link>Política de privacidad</Link>
         </RouterLink>
         <Typography variant="body2" color="GrayText">
-          MedraMart © 2022
+          By{" "}
+          <Link
+            href="https://www.medramart.com/"
+            color="inherit"
+            target="_blank"
+          >
+            MedraMart
+          </Link>{" "}
+          © 2022
         </Typography>
       </Box>
     </>

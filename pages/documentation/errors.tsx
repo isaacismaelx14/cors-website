@@ -109,12 +109,12 @@ function Errors() {
                   </Box>
                   <Spacer height={10} />
                   <Typography variant="body1">
-                    Este error se debe a que la CORS posiblemente no esté
-                    disponible en estos momentos, ya sea por algún mantenimiento
-                    o alguna actualización de la CORS. En este caso puedes
-                    esperar unas horas, y si el problema persiste podrías
-                    ponerte en contacto con algún administrador de la CORS para
-                    obtener más información.
+                    Este error se debe a que la CORS no esta disponible, ya sea
+                    por algún mantenimiento, que este apagada o alguna
+                    actualización de la CORS. En este caso puedes esperar unas
+                    horas, y si el problema persiste podrías ponerte en contacto
+                    con algún administrador de la CORS para obtener más
+                    información.
                   </Typography>
                 </Box>
                 <Box className="error">

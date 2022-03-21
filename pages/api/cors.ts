@@ -59,6 +59,36 @@ export const corsList: ICors[] = [
     city: "Azua",
     urlCode: "CACHEDIR2189444303",
   },
+  {
+    name: "CRSE",
+    url: "http://200.88.52.149",
+    city: "El Seibo",
+    urlCode: "CACHEDIR2886212069",
+  },
+  {
+    name: "RDMA",
+    url: "http://ggsrdma.ddns.net:8080",
+    city: "Valverde, Mao",
+    urlCode: "CACHEDIR2189444303",
+  },
+  {
+    name: "RDMS",
+    url: "http://66.98.69.206",
+    city: "Miches",
+    urlCode: "CACHEDIR2886212069",
+  },
+  {
+    name: "RDNA",
+    url: "http://64.32.122.141",
+    city: "Nagua",
+    urlCode: "CACHEDIR2189444303",
+  },
+  {
+    name: "RDPP",
+    url: "http://rdpp.dyndns.org:8080",
+    city: "Costambar, Puerto Plata",
+    urlCode: "CACHEDIR2886212069",
+  },
 ];
 
 
